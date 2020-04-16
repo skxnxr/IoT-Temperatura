@@ -1,5 +1,7 @@
 <?php
 include_once 'conexion.php';
+  date_default_timezone_set('America/Caracas');
+  $fecha2 = date('Y-m-d');
 ?>
 
 <!DOCTYPE html>
@@ -61,103 +63,9 @@ include_once 'conexion.php';
   </nav>
   <!-- /.navbar -->
 
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="#" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">Internet Of Things</span>
-    </a>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex justify-content-center ">
-        <!-- <div class="image">
-          <img src="dist/img/user8-128x128.jpg" class="img-circle elevation-2" alt="User Image">
-        </div> -->
-        <div class="info">
-          <a href="#" >Navegación</a>
-        </div>
-      </div>
-
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Gráficos
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link active" >
-                  <i class="far fa-circle text-info"></i>
-                  <p>En vivo</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index2.html" class="nav-link ">
-                  <i class="far fa-circle text-info"></i>
-                  <p>Ayer vs Hoy</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  <i class="far fa-circle text-info"></i>
-                  <p>Rango ajustable</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Tabla de datos
-                <!-- <span class="right badge badge-danger">New</span> -->
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-plus-circle"></i>
-              <p>
-                Registrar nuevo módulo
-                <!-- <span class="right badge badge-danger">New</span> -->
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-question-circle"></i>
-              <p>
-                Como funciona
-                <!-- <span class="right badge badge-danger">New</span> -->
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-info-circle"></i>
-              <p>
-                Sobre nosotros
-                <!-- <span class="right badge badge-danger">New</span> -->
-              </p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
+<?php
+include_once 'sidebar.php';
+?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -198,9 +106,15 @@ include_once 'conexion.php';
                 <span class="info-box-text">Temp. Min</span>
                 <span class="info-box-number">
                     <?php
+                    //date_default_timezone_set('America/Caracas');
+                    //$fecha2 = date('Y-m-d');
+                   
                       // $sql = "SELECT `temperatura` from `datos` order by `temperatura` ASC limit 1";
                       //$sql ="SELECT DATE_FORMAT(`fecha`,'%Y-%m-%d %H:%i') AS fecha, `temperatura` FROM `datos` WHERE `fecha` >= NOW() - INTERVAL 24 HOUR ORDER BY `temperatura` ASC limit 1";
-                      $sql ="SELECT `temperatura` FROM `datos` WHERE LEFT(fecha, 10) = LEFT(now(),10) ORDER BY `temperatura` ASC limit 1";
+                      //$sql ="SELECT `temperatura` FROM `datos` WHERE LEFT(fecha, 10) = LEFT(now(),10) ORDER BY `temperatura` ASC limit 1";
+                      //$sql = "SELECT DATE_FORMAT(`fecha`,'%Y-%m-%d %H:%i') AS fecha, `temperatura` FROM `datos` WHERE `fecha` >= NOW() - INTERVAL 28 HOUR ORDER BY `temperatura` ASC limit 1";
+                      //$sql = "SELECT DATE_FORMAT(`fecha`,'%Y-%m-%d') AS fecha, `temperatura` FROM `datos` WHERE `fecha` = '" . $fecha2 ."'  ORDER BY `temperatura` ASC limit 1";
+                      $sql = "SELECT `temperatura` FROM `datos` WHERE DATE(`fecha`) = '" . $fecha2 ."' ORDER BY `temperatura` ASC limit 1";
 
                       $resultado = $conn->query($sql);
                       $temp = $resultado->fetch_assoc();
@@ -223,9 +137,12 @@ include_once 'conexion.php';
                 <span class="info-box-text">Temp. Máx</span>
                 <span class="info-box-number">
                   <?php
+                   //echo $fecha2;
                     //$sql = "SELECT`temperatura` from `datos` order by `temperatura` DESC limit 1";
                     //$sql ="SELECT DATE_FORMAT(`fecha`,'%Y-%m-%d %H:%i') AS fecha, `temperatura` FROM `datos` WHERE `fecha` >= NOW() - INTERVAL 24 HOUR ORDER BY `temperatura` DESC limit 1";
-                    $sql ="SELECT `temperatura` FROM `datos` WHERE LEFT(fecha, 10) = LEFT(now(),10) ORDER BY `temperatura` DESC limit 1";
+                    //$sql ="SELECT `temperatura` FROM `datos` WHERE LEFT(fecha, 10) = LEFT(now(),10) ORDER BY `temperatura` DESC limit 1";
+                    //$sql = "SELECT DATE_FORMAT(`fecha`,'%Y-%m-%d %H:%i') AS fecha, `temperatura` FROM `datos` WHERE `fecha` >= NOW() - INTERVAL 28 HOUR ORDER BY `temperatura` DESC limit 1";
+                    $sql = "SELECT `temperatura` FROM `datos` WHERE DATE(`fecha`) = '" . $fecha2 ."' ORDER BY `temperatura` DESC limit 1";
 
                     $resultado = $conn->query($sql);
                     $temp = $resultado->fetch_assoc();
