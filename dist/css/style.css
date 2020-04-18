@@ -1,0 +1,18 @@
+.btn1{
+
+
+    border: 1px solid #2196f3;
+    color: #2196f3;
+    cursor: pointer;
+    transition: color 0.6s ease-out , 
+                box-shadow 0.3s ease 0.2s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.centrar{
+    margin-top: 10px
+
+}
+.centrar1{
+    margin-top: 5px
+
+}
