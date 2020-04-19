@@ -25,7 +25,7 @@ include_once 'conexion.php';
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
+    <!-- <link rel="manifest" href="/manifest.json"> -->
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -112,7 +112,7 @@ include_once 'sidebar.php';
                   <!-- <dd>Registrar el módulo en nuestra API para así mostrar los datos recopilados lo puedes hacer facilmente presionando <a class="btn btn-xs btn-outline-primary"  href="nuevo_modulo.php" role="button">Aquí</a></dd> -->
                   <dd>Registrar el módulo en nuestra API para así mostrar los datos recopilados, lo puedes hacer facilmente presionando  <a class=""  href="nuevo_modulo.php" >aquí</a></dd>
                   <div class="text-center">
-                    <h3>Y ¡Listo! </h3>
+                    <h3>¡Listo! </h3>
                     <h5>Tus datos son mostrados en gráficas personalizadas</h5>
                   </div>
                 </dl>
@@ -179,7 +179,7 @@ include_once 'sidebar.php';
                                   <td class="align-middle">Editor Arduino</td>
                                </tr>
                                <tr>
-                                  <td >https://www.arduino.cc</td>
+                                  <td ><a href="https://www.arduino.cc/en/Main/Software" target="_blank" rel="noopener noreferrer"></a>https://www.arduino.cc</td>
                                </tr>
                              </tbody>
                            </table>
@@ -197,7 +197,7 @@ include_once 'sidebar.php';
                                   <td class="align-middle">Sketch</td>
                                </tr>
                                <tr>
-                                  <td >https://github.com/</td>
+                                  <td><a href="https://github.com/" target="_blank" rel="noopener noreferrer"></a> https://github.com/</td>
                                </tr>
                              </tbody>
                            </table>
@@ -262,13 +262,7 @@ include_once 'sidebar.php';
 <script src="plugins/raphael/raphael.min.js"></script>
 <script src="plugins/jquery-mapael/jquery.mapael.min.js"></script>
 <script src="plugins/jquery-mapael/maps/usa_states.min.js"></script> 
-<!-- ChartJS -->
-<!-- <script src="plugins/chart.js/Chart.min.js"></script> -->
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-<script src="dist/js/morris-app.js"></script>
-<!-- <script src="dist/js/app.js"></script> -->
 
 <script src="dist/js/comunes.js"></script>
 

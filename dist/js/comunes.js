@@ -4,7 +4,7 @@ $(document).ready(function () {
 let url = window.location.href;
 
 /// Elementos de li
-const tabs = ["index", "ayer", "rango", "historico", "como_funciona", "nuevo_modulo", "informacion"];
+const tabs = ["index", "ayer", "rango", "historico", "como_funciona", "nuevo_modulo", "contacto"];
 
 tabs.forEach(e => {
     /// Agregar .php y ver si lo contiene en la url

@@ -45,12 +45,12 @@
                   <p>Ayer vs Hoy</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a href="rango.php" id="tab-rango" class="nav-link">
                   <i class="far fa-circle text-info"></i>
                   <p>Rango ajustable</p>
-                </a>
-              </li>
+                </a> 
+              </li> -->
             </ul>
           </li>
           <li class="nav-item">
@@ -66,7 +66,7 @@
             <a href="como_funciona.php" id="tab-como_funciona" class="nav-link">
               <i class="nav-icon far fa-question-circle"></i>
               <p>
-                ¿Como funciona?
+                ¿Cómo funciona?
                 <!-- <span class="right badge badge-danger">New</span> -->
               </p>
             </a>
@@ -82,10 +82,10 @@
             </a>
 
           <li class="nav-item" >
-            <a href="informacion.php" id="tab-informacion" class="nav-link">
+            <a href="contacto.php" id="tab-contacto" class="nav-link">
               <i class="nav-icon fas fa-info-circle"></i>
               <p>
-                Sobre nosotros
+                Contacto
                 <!-- <span class="right badge badge-danger">New</span> -->
               </p>
             </a>

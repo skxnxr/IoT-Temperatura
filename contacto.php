@@ -1,7 +1,6 @@
 <?php
 include_once 'conexion.php';
   date_default_timezone_set('America/Caracas');
-  $fecha2 = date('Y-m-d');
 ?>
 
 <!DOCTYPE html>
@@ -41,8 +40,6 @@ include_once 'conexion.php';
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <!-- Morris,js -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
-  <!-- Datatables -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/r-2.2.3/rr-1.2.6/datatables.min.css"/>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-not-fixed">
 <div class="wrapper">
@@ -76,85 +73,47 @@ include_once 'sidebar.php';
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Historico de datos</h1>
+            <h1 class="m-0 text-dark">Contacto</h1>
           </div><!-- /.col -->
+          
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
 
+
     <!-- Main content -->
     <section class="content">
-      <div class="row">
 
-        <div class="col-md-12">
-          <div class="card card-primary card-outline">
-
-            <!-- /.card-header -->
-            <div class="card-body p-1">
-
-            <table id="data" class="display nowrap" style="width:100%">
-            <thead>
-                <tr>
-
-                  <th>Fecha</th>
-                  <th>Temperatura</th>
-                  <th>Presión atmosférica</th>
-                  <th>Tipo de sensor</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php
-                   try {
-                     //$sql = "SELECT DATE_FORMAT(fecha, '%d/%m/%Y %h:%i %p') as fecha, temperatura,presion FROM datos WHERE datos.id mod 10 = 0";
-                     $sql = "SELECT * FROM datos WHERE datos.id mod 10 = 0 ORDER BY id DESC";
-                     $resultado = $conn->query($sql);
-
-                   } catch (Exception $e) {
-                     $error = $e->getMessage();
-                     echo $error;
-                   }
-                   while ($datos_sensor = $resultado->fetch_assoc()) { ?>
-                     <tr>
-
-                      <td>
-                        <?php 
-                        date_default_timezone_set('America/Caracas');
-                         setlocale(LC_TIME, 'spanish');
-                         echo utf8_encode(strftime("%A, %d de %B del %Y", strtotime($datos_sensor['fecha']))); 
-                         echo " " . date('h:i A', strtotime($datos_sensor['fecha']));
-                        ?>
-                      </td>
-                     
-                      <td><?php echo $datos_sensor['temperatura'] . " °C" ; ?></td>
-                      <td><?php echo round($datos_sensor['presion'], 1, PHP_ROUND_HALF_UP) . " hPa"; ?></td>
-                      <td><?php echo "Exterior"; ?></td>
-                     </tr>
-                <?php   }  ?>  
-                
-                </tbody>
-                <tfoot>
-                <tr>
-
-                  <th>Fecha</th>
-                  <th>Temperatura</th>
-                  <th>Presión atmosférica</th>
-                  <th>Tipo de sensor</th>
-                </tr>
-                </tfoot>
-            </table>
-
-            </div>
-
-          </div>
-          <!-- /.card -->
+      <!-- Default box -->
+      <div class="card">
+        <div class="card-header">
+          <p class="lead">Para mantener el contacto escríbenos por:</p>
         </div>
-        <!-- /.col -->
+        <div class="card-body">
+            <div class="container">
+              <div class="row d-flex h-100 ">
+                <div class="col-xs-4"><i class="fas fa-envelope-open-text fa-4x" style="color:#343A40;"></i></div>
+                <div class="col-xs-10 justify-content-center align-self-center ml-3"><a href="mailto:SilicioStore@gmail.com" style="color:#000000;">SilicioStore@gmail.com</a></div>
+                <div class="w-100 mt-3"></div>
+                <div class="col-xs-4"> <i class="fab fa-linkedin fa-5x" style="color:#15AAC0;" ></i> </div>
+                <div class="col justify-content-center align-self-center ml-1"><a href="http://www.linkedin.com/in/salvarezc2" target="_blank" rel="noopener noreferrer">in/salvarezc2</a></div>
+              </div>
+            </div>
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+          <p>En la brevedad te responderemos :)</p>
+        </div>
+        <!-- /.card-footer-->
       </div>
-      <!-- /.row -->
+      <!-- /.card -->
+
     </section>
     <!-- /.content -->
-    
+
+
+
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -194,10 +153,7 @@ include_once 'sidebar.php';
 <script src="plugins/jquery-mapael/jquery.mapael.min.js"></script>
 <script src="plugins/jquery-mapael/maps/usa_states.min.js"></script> 
 
-<!-- Datatables -->
-<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/r-2.2.3/rr-1.2.6/datatables.min.js"></script>
-<script src="dist/js/datatables-app.js"></script>
-
+<!-- <script src="dist/js/app.js"></script> -->
 
 <script src="dist/js/comunes.js"></script>
 
