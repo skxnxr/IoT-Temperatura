@@ -3,12 +3,13 @@ include_once 'conexion.php';
 
 $email = $_POST['email'];
 $nombre = $_POST['password'];
+$ubicacion = $_POST['ubicacion'];
 
 //die(json_encode($_POST));
 
 try {
-    $stmt = $conn->prepare("INSERT INTO usuarios (email, nombre) VALUES (?,?)");
-    $stmt->bind_param("ss", $email, $nombre);
+    $stmt = $conn->prepare("INSERT INTO usuarios (email, nombre, ubicacion) VALUES (?,?,?)");
+    $stmt->bind_param("sss", $email, $nombre, $ubicacion);
     $stmt->execute();
     $id_registro = $stmt->insert_id;
     if($id_registro > 0){

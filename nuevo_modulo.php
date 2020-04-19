@@ -119,10 +119,20 @@ include_once 'sidebar.php';
                     </div>
                   </div>
 
+                  <div class="form-group">
+                    <label for="exampleInputUbicacion">Ubicación:</label>
+                    <div class="input-group ">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-map-marked-alt"></i></span>
+                      </div>
+                      <input type="text" id="ubicacion" name="ubicacion" class="form-control" id="exampleInputUbicacion1" placeholder="Ubicacion del dispositivo">
+                    </div>
+                  </div>
+
                   <div class="form-group mb-0">
                     <div class="custom-control custom-checkbox">
                       <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1">
-                      <label class="custom-control-label" for="exampleCheck1">Acepto los <a href="#">terminos del servicio</a>.</label>
+                      <label class="custom-control-label" for="exampleCheck1">Acepto los <a href="#">términos del servicio</a>.</label>
                     </div>
                   </div>
                 </div>
@@ -259,6 +269,10 @@ include_once 'sidebar.php';
         required: true,
         minlength: 5
       },
+      ubicacion: {
+        required: true,
+        minlength: 5
+      },
       terms: {
         required: true
       },
@@ -272,7 +286,11 @@ include_once 'sidebar.php';
         required: "Por favor introduce el nombre de tu dispositivo",
         minlength: "El nombre debe de tener al menos 5 caracteres de longitud, recuerda ser descriptivo"
       },
-      terms: "Por favor acepta los terminos de servicio"
+      ubicacion: {
+        required: "Por favor introduce la ubicación de tu dispositivo",
+        minlength: "La ubicación debe de tener al menos 5 caracteres de longitud, recuerda ser descriptivo"
+      },
+      terms: "Por favor acepta los términos de servicio"
     },
     errorElement: 'span',
     errorPlacement: function (error, element) {
