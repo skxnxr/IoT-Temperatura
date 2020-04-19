@@ -109,7 +109,8 @@ include_once 'sidebar.php';
                   <dt>Paso 2:</dt>
                   <dd>Cargar el sketch arduino, modificando los parametros (nombre/contraseña de tu router WiFi y asignandole un nombre a tu dispositivo en el campo "serie").</dd>
                   <dt>Paso 3:</dt>
-                  <dd>Registrar el módulo en nuestra API para así mostrar los datos recopilados lo puedes hacer facilmente presionando <a class="btn btn-xs btn-outline-primary"  href="nuevo_modulo.php" role="button">Aquí</a></dd>
+                  <!-- <dd>Registrar el módulo en nuestra API para así mostrar los datos recopilados lo puedes hacer facilmente presionando <a class="btn btn-xs btn-outline-primary"  href="nuevo_modulo.php" role="button">Aquí</a></dd> -->
+                  <dd>Registrar el módulo en nuestra API para así mostrar los datos recopilados, lo puedes hacer facilmente presionando  <a class=""  href="nuevo_modulo.php" >aquí</a></dd>
                   <div class="text-center">
                     <h3>Y ¡Listo! </h3>
                     <h5>Tus datos son mostrados en gráficas personalizadas</h5>
@@ -269,7 +270,7 @@ include_once 'sidebar.php';
 <script src="dist/js/morris-app.js"></script>
 <!-- <script src="dist/js/app.js"></script> -->
 
-
+<script src="dist/js/comunes.js"></script>
 
 <!-- PAGE SCRIPTS -->
 <!-- <script src="dist/js/pages/dashboard2.js"></script> -->

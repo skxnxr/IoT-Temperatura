@@ -305,6 +305,8 @@ include_once 'sidebar.php';
 <script src="dist/js/morris-app.js"></script>
 <!-- <script src="dist/js/app.js"></script> -->
 
+<script src="dist/js/comunes.js"></script>
+
 <!-- Función para actualizar  -->
 <script type="text/javascript">
   function actualizar(){location.reload(true);}

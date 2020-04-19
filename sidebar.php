@@ -25,7 +25,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+            <a href="#" id="grafico" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Gráficos
@@ -34,19 +34,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="index.php" class="nav-link active" >
+                <a href="index.php" id="tab-index" class="nav-link" >
                   <i class="far fa-circle text-info"></i>
                   <p>En vivo</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="ayer.php" class="nav-link ">
+                <a href="ayer.php" id="tab-ayer" class="nav-link ">
                   <i class="far fa-circle text-info"></i>
                   <p>Ayer vs Hoy</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="rango.php" class="nav-link">
+                <a href="rango.php" id="tab-rango" class="nav-link">
                   <i class="far fa-circle text-info"></i>
                   <p>Rango ajustable</p>
                 </a>
@@ -54,7 +54,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="historico.php" class="nav-link">
+            <a href="historico.php" id="tab-historico" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
                 Tabla de datos
@@ -62,8 +62,8 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="como_funciona.php" class="nav-link">
+          <li class="nav-item" >
+            <a href="como_funciona.php" id="tab-como_funciona" class="nav-link">
               <i class="nav-icon far fa-question-circle"></i>
               <p>
                 ¿Como funciona?
@@ -73,7 +73,7 @@
           </li>
           </li>
           <li class="nav-item">
-            <a href="nuevo_modulo.php" class="nav-link">
+            <a href="nuevo_modulo.php" id="tab-nuevo_modulo" class="nav-link">
               <i class="nav-icon fas fa-plus-circle"></i>
               <p>
                 Registrar nuevo módulo
@@ -81,8 +81,8 @@
               </p>
             </a>
 
-          <li class="nav-item">
-            <a href="informacion.php" class="nav-link">
+          <li class="nav-item" >
+            <a href="informacion.php" id="tab-informacion" class="nav-link">
               <i class="nav-icon fas fa-info-circle"></i>
               <p>
                 Sobre nosotros
