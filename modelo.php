@@ -134,11 +134,7 @@ include_once 'sidebar.php';
 <script src="dist/js/morris-app.js"></script>
 <!-- <script src="dist/js/app.js"></script> -->
 
-<!-- Función para actualizar  -->
-<script type="text/javascript">
-  function actualizar(){location.reload(true);}
-  setInterval("actualizar()",180000);
-</script>
+<script src="dist/js/comunes.js"></script>
 
 <!-- PAGE SCRIPTS -->
 <!-- <script src="dist/js/pages/dashboard2.js"></script> -->
